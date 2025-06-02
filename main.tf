@@ -34,6 +34,7 @@ resource "aws_instance" "aws-training" {
     sudo apt-get update
     sudo apt-get install -y kubelet kubeadm kubectl
     sudo apt-mark hold kubelet kubeadm kubectl
+    sudo hostnamectl set-hostname WorkerNode
   EOF
   root_block_device {
     volume_size = 15
